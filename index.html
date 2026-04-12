@@ -20,7 +20,7 @@
         <div class="main">
            <div class="widget">
                 <h1>Notepad</h1>
-                <textarea id="note-area" name="message" rows="20" cols="40" value=""></textarea>
+                <textarea id="note-area" name="message" rows="20" cols="40" placeholder="text goes here"></textarea>
                 <p><button id="saveNoteBtn">Save</button></p>
            </div>
 
@@ -39,15 +39,7 @@
 </body>
 
 <script>
-    var loadNotes
-    try{
-        loadNotes = String(localStorage.getItem("notes")); 
-    }
-
-    catch(err){
-        loadNotes = "Enter your notes here, then click 'save'";
-    }
-        
+    var loadNotes = localStorage.getItem("notes");      
     $("#note-area").val(loadNotes);
 
 
